@@ -31,13 +31,14 @@
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
         android:text="Login" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_dark_background"
+        android:backgroundTint="#2196F3"
         android:text="Register" />
 
 
