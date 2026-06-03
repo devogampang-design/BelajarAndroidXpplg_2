@@ -23,11 +23,7 @@ public class ListSiswa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_list_siswa);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
 
         rvlistSiswa = (RecyclerView) findViewById(R.id.rvListSiswa);
         // membuat array list menggunakan SiswaModel
@@ -42,7 +38,7 @@ public class ListSiswa extends AppCompatActivity {
         SiswaModel siswa7 = new SiswaModel("Brahim Diaz", "21", "Maroko", "Gelandang serang", R.drawable.diaz, "detail lengkap Brahim Diaz");
         SiswaModel siswa8 = new SiswaModel("Ferland Mendy", "23", "Prancis", "Bek kiri", R.drawable.mendy, "detail lengkap Ferland Mendy");
         SiswaModel siswa9 = new SiswaModel("Antonio Rudiger", "22", "Germany", "Bek tengah", R.drawable.rudiger, "detail lengkap Antonio Rudiger");
-        SiswaModel siswa10 = new SiswaModel("Thibaut Courtois", "1", "Belgia", "Kiper", R.drawable.thibaut, "detail lengkap Thibaut Courtois");
+        SiswaModel siswa10 = new SiswaModel("Thibaut Cou    rtois", "1", "Belgia", "Kiper", R.drawable.thibaut, "detail lengkap Thibaut Courtois");
 
         listDataSiswa.add(siswa1);
         listDataSiswa.add(siswa2);

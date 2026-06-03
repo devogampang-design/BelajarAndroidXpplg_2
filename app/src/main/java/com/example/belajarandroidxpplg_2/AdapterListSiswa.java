@@ -34,9 +34,9 @@ public class AdapterListSiswa extends RecyclerView.Adapter<AdapterListSiswa.View
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNama = itemView.findViewById(R.id.tvNama);
-            tvNoPunggung = itemView.findViewById(R.id.tvNoPunggungDetail);
-            tvNegara = itemView.findViewById(R.id.tvNegaraDetail);
-            tvPosisi = itemView.findViewById(R.id.tvPosisiDetail);
+            tvNoPunggung = itemView.findViewById(R.id.tvNoPunggung);
+            tvNegara = itemView.findViewById(R.id.tvNegara);
+            tvPosisi = itemView.findViewById(R.id.tvPosisi);
 
         }
     }
@@ -51,7 +51,7 @@ public class AdapterListSiswa extends RecyclerView.Adapter<AdapterListSiswa.View
 
     @Override
     public void onBindViewHolder(@NonNull AdapterListSiswa.ViewHolder holder, int position) {
-        String nama = listSiswa.get(position).getNama();
+        String nama  = listSiswa.get(position).getNama();
         String nopunggung = listSiswa.get(position).getNoPunggung();
         String negara = listSiswa.get(position).getNegara();
         String posisi = listSiswa.get(position).getPosisi();

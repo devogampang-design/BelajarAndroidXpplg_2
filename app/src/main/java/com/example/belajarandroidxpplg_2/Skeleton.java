@@ -3,6 +3,7 @@ package com.example.belajarandroidxpplg_2;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -16,8 +17,8 @@ import org.w3c.dom.Text;
 
 public class Skeleton extends AppCompatActivity {
 
-    TextView tvUsername;
-    Button btnLogout;
+    TextView tvsplashscreen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +26,29 @@ public class Skeleton extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_skeleton);
 
-        tvUsername = findViewById(R.id.tvUsername);
-        btnLogout = findViewById(R.id.btnLogout);
+        tvsplashscreen = findViewById(R.id.tvsplashscreen);
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ;
         SharedPreferences prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
         String username = prefs.getString("username", "Guest");
 
-        tvUsername.setText("Hallo, " + username);
 
-        btnLogout.setOnClickListener(v -> {
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.clear();
-            editor.apply();
+                if (!username.equals("")) {
 
-            Intent intent = new Intent(Skeleton.this, MainActivity.class);
-            startActivity(intent);
-            finish();
+                    Intent intent = new Intent(Skeleton.this, Menu.class);
+                    startActivity(intent);
+                } else {
 
-        });
+                    Intent intent = new Intent(Skeleton.this,MainActivity.class);
+                    startActivity(intent);
+                }
 
+                finish();
+            }
+        }, 2000);
     }
 }
+

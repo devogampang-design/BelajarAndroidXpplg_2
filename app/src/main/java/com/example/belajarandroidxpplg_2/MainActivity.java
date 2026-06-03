@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, "sukses login", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(MainActivity.this, ListSiswa.class);
+                    Intent intent = new Intent(MainActivity.this, Menu.class);
                     intent.putExtra("username", username);
                     // others intent put extras
                     finish();

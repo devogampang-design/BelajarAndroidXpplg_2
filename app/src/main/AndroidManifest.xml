@@ -12,16 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarAndroidXpplg_2">
         <activity
-            android:name=".Skeleton"
-            android:exported="false" />
-        <activity
-            android:name=".adapter_pemain"
-            android:exported="false" />
-        <activity
             android:name=".DetailListPemain"
             android:exported="false" />
         <activity
-            android:name=".ListPemain"
+            android:name=".DetailListSiswa"
+            android:exported="false" />
+
+        <activity
+                android:name=".ListPemain"
+            android:exported="false" />
+        <activity
+            android:name=".ListSiswa"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+                android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Skeleton"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
